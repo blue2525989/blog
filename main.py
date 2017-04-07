@@ -27,11 +27,11 @@ class Index(webapp2.RequestHandler):
 
 
 class Blog(webapp2.RequestHandler):
-    def render_blog(self, title="", content="", error=""):
+    def render_blog(self):
         posts = db.GqlQuery("SELECT * FROM Post ORDER BY created DESC LIMIT 5")
 
         t = jinja_env.get_template("blog.html")
-        content = t.render(title=title, content=content, error=error, posts=posts)
+        content = t.render(posts=posts)
         self.response.write(content)
 
     def get(self):
