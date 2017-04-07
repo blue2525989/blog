@@ -17,7 +17,7 @@ class Post(db.Model):
 
 
 class Index(webapp2.RequestHandler):
-    def render_index(self, title="", content="", error=""):
+    def render_index(self):
         t = jinja_env.get_template("index.html")
         content = t.render()
         self.response.write(content)
