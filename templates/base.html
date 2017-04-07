@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+
+
+    <style type="text/css">
+        body {
+            background-color: cyan;
+            color: green;
+            font-weight: bold;
+            font-family: sans-serif;
+            width: 800px;
+            margin:0 auto;
+            padding: 10px;
+        }
+        .error {
+            color: red;
+        }
+        label {
+            display: block;
+            font-size: 20px;
+        }
+        input[type=text]{
+            width: 400px;
+            font-size: 20px;
+            padding: 2px;
+        }
+        textarea {
+            width: 400px;
+            height: 200px;
+            font-size: 17px;
+            font-family: monospace:
+        }
+        input[type=submit] {
+            font-size: 24px;
+        }
+        hr {
+            margin: 20px;
+        }
+            .art + .art {
+            margin-top: 20px;
+        }
+        .art-title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .art-body {
+            margin: 0;
+            font-size: 17px;
+        }
+    </style>
+
+    <body>
+
+    <div align="center"><h1>My Blog</h1></div>
+
+    <nav>
+        <div align="center">
+            <a href="/">Index Page</a> <a href="/blog">My Blog</a> <a href="/newpost">New Post</a></div>
+    </nav>
+
+    <div align="center">
+    {% block content %}
+
+    {% endblock %}
+    </div>
+
+    </body>
+</html>
